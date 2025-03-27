@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# PortfolioList Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed Application: https://assignment-resollect.vercel.app/
 
-## Available Scripts
+Overview
+## Overview
+The `PortfolioList` component is a React-based table that displays loan details and allows users to search for loans by loan number. It utilizes the **Ant Design (AntD) UI framework** and manages state with the `useState` hook.
 
-In the project directory, you can run:
+## Tech Stack & Libraries Used
+- **React.js** - Core library for building UI components.
+- **Ant Design (AntD)** - UI framework for styling and components such as `Table`, `Input`, `Button`, and `Checkbox`.
+- **JavaScript (ES6+)** - Used for logic and state management.
 
-### `npm start`
+## Component Structure
+### State Management
+The component maintains the following states:
+- `dataSource` - The original list of loan records.
+- `filteredData` - The dynamically filtered list based on search input.
+- `searchText` - The search query entered by the user.
+- `selectedRowKeys` - The selected checkboxes in the table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Search Functionality
+- `handleSearch(value)`: Updates `searchText` and filters `dataSource` based on the loan number.
+- `filterData(searchText)`: Filters `dataSource` where `LoanNo` contains the search text.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Table & Columns
+- Displays loan information, including Loan Number, Borrower, Co-Borrower, Amount, etc.
+- Uses the `Table` component from AntD.
+- A checkbox column allows row selection.
 
-### `npm test`
+### UI Components
+- **Search Input** (`Input.Search`): Allows users to filter loans by entering a loan number.
+- **Buttons** (`Button` from AntD): Used for column selection and additional filters.
+- **Checkboxes** (`Checkbox` from AntD): Enables selection of multiple loans.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
+- **✅ Live Search**: Filters loans as the user types.
+- **✅ Data Table**: Displays loan details in a structured format.
+- **✅ Row Selection**: Users can select multiple loans.
+- **✅ Pagination**: Automatically manages large datasets.
+- **✅ Filters & Actions**: Placeholder for additional filtering options.
 
-### `npm run build`
+## Installation
+To install dependencies, run:
+```sh
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+To start the application, run:
+```sh
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Conclusion
+This component provides an interactive way to manage and search loan records efficiently. The integration of Ant Design ensures a responsive and user-friendly experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
